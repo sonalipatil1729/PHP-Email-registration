@@ -1,0 +1,71 @@
+	<html>
+	<head>
+		<title>The Startup Site</title>
+		<link type = "text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<link type = "text/css" rel = "stylesheet" href = "phpCSS.css"></link>
+		<script src="phpRegJS.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Beautiful World</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="phpRegister.html">Sign Up <i class="fa fa-user-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+
+		
+		<DIV class = "mainBody">
+			<div class = "container">
+				<div class = "col-xs-3">
+					
+					<div class = "headText">
+						<h1 class = "text-center"><b>Login</b></h1>
+					</div>
+					<div class = "login">
+						<form name = "login"  method="post" >
+							
+							<label for = "userName">Email</label>
+							<input class = "form-control" id = "userName" type="email" name="userName" placeholder = "abc@zyz.com"  autofocus="autofocus" tabindex="1" onkeydown ="removeError()">
+							<label id = "uNameError" class="alert "></label>
+							
+							<label for = "password">Password</label>
+							<input class = "form-control" id = "password" type="password" name="password"  autocomplete="off" tabindex="2" maxlength = "15" minlength = "8" onkeydown="removeError()">
+							<label id = "pwdError" class="alert "></label>
+							<label id = "phpError" class="alert "></label>
+							<button class = "btn btn-primary btn-lg btn-block" type = "submit" value = "Login" tabindex="3"  onclick=" return validateCredentials()"  >
+								<b>Login</b>
+							</button>
+							<B><p class = "login-form__footer text-center" tabindex="3">
+								New User? <a href = "phpRegister.html">Register with us!</a>
+							</p></B>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</DIV>
+		
+	</body>
+	</html>

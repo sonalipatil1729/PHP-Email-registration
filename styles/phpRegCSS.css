@@ -1,0 +1,19 @@
+body{
+	background: url(https://images.freecreatives.com/wp-content/uploads/2015/04/brown_wall_texture_by_fantasystock-d34un9s.jpg);
+	background-size:cover;
+	font-family:"Lato";
+	color: white;
+}
+#text-secondary{
+	color: #b3b3b3;
+}
+
+body{
+	font-family:Droid Serif;
+}
+
+.registrationForm {
+	margin-top: 5%;
+	margin-left:30%;
+}
+

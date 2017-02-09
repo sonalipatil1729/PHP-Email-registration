@@ -1,0 +1,144 @@
+	<html>
+	<head>
+		<title>Registration</title>
+		<link type = "text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<link type = "text/css" rel = "stylesheet" href = "phpRegCSS.css"></link>
+		<script src="phpRegJS.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+		<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Beautiful World</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="phpLogin.html">Login <i class="fa fa-user"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<DIV class = "registrationForm">
+			<div class = "container">
+
+				<div class = "row">
+					<div class = "col-sm-8 col-md-6 ">
+						<div class = "headText">
+							<h1 class = "text-center">Registration</h1>
+						</div>
+						<div class = "login">
+							<form action = "register.php" name = "loginForm" onsubmit = "return validate()" method="post">
+								<div class = "row">
+									<div class = "col-xs-6">
+										<div class = "form-group" >
+											<label for = "firstName"> 
+												First Name 
+											</label>
+											<input class = "form-control" id = "firstName" type="text" name="firstName" placeholder = "Sonali" required autofocus="autofocus" minlength = "1" maxlength = "20"  tabindex="1" message = "Error">
+										</div>
+									</div>
+									<div class = "col-xs-6">
+										<div class = "form-group">
+											<label for = "lastName"> 
+												Last Name 	
+											</label>
+											<input class = "form-control" id = "lastName" type="text" name="lastName" placeholder = "Patil" required maxlength = "5" minlength = "1" tabindex="20">
+										</div>
+									</div>
+								</div>
+								<div class = "form-group">
+									<label for = "email"> 
+										Email address 	
+									</label>
+									<input class = "form-control" id = "email" type="text" name="email"  autocomplete="off" tabindex="3" onblur=" return checkemail(this)">
+									<label id = "emailError" class = "emailError"></label>
+
+								</div> 
+								<div class = "form-group">
+									<label for = "password"> 
+										Password <span id = "text-secondary"> (Min 8 char - Max 15 char)</span>	
+									</label>
+									<input class = "form-control" id = "password" type="password" name="password" autocomplete="off" tabindex="4" maxlength = "15" minlength = "8" >
+								</div>
+								<div class = "form-group">
+									<label for = "passwordCnf"> 
+										Confirm Password 
+									</label>
+									<input class = "form-control" id = "passwordCnf" type="password" name="passwordCnf" autocomplete="off" tabindex="4" maxlength = "15" minlength = "8">
+								</div>
+								<div class = "form-group">
+									<label for = "address"> 
+										Address
+									</label>
+									<input class = "form-control" id = "address" type="text" name="address" placeholder = "313 New York Avenue, NJ, USA" tabindex="3" >
+								</div>
+
+								<div class = "form-group">
+									<label for = "contactNo"> 
+										Contact Number	
+									</label>
+									<input class = "form-control" id = "contactNo" type="text" name="contactNo"  tabindex="3" placeholder = "xxx-xxx-xxxx" >
+
+								</div>  
+								
+								
+								<div class = "row">
+									<div class = "col-xs-6">
+										<div  class ="form-group">
+											<label>	
+												Gender 
+											</label> 
+											<p></p>
+											<input id = "rd1" type="radio" name="gender" value = "Female" required> Female
+											<input id = "rd2" type="radio" name="gender" value = "Male"> Male
+										</div>
+									</div>
+									<div class = "col-xs-6">
+										<div class = "form-group">
+											<label> Birth Date </label> 
+											<input class = "form-control" type="date" id = "date" name="date">
+										</div>
+									</div>
+								</div>
+								
+
+								<div class = "form-group">
+									<p>
+										<button class = "btn btn-primary btn-lg btn-block" type = "submit" value = "Login" tabindex="5" >
+											<b>Register</b>
+										</button>
+									</p>
+
+								</div> 
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</DIV>
+
+	</body>
+	<script>
+		$(document).ready(function(){
+			$(".emailError").change(function(){
+				alert("The text has been changed.");
+			});
+		});
+	</script>
+	</html>
